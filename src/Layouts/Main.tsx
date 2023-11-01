@@ -104,7 +104,7 @@ function Main({ showModal, setShowModal }: { showModal: boolean, setShowModal: (
             return
         }
         
-        console.log('Hubo un error', error);
+
 
     }
 
@@ -124,7 +124,7 @@ function Main({ showModal, setShowModal }: { showModal: boolean, setShowModal: (
                 console.log(error);
                 return
             }
-            
+
             let { data: facts, error } = await supabase.from('facts').select('*').eq('category',category)
             setComments(facts as commentType[]);
             
