@@ -13,10 +13,6 @@ export const buttons:actionsType[] = [
         color:'#EF3A3D'
     },
     {
-        text:'finance',
-        color:'#EF3A3D'
-    },
-    {
         text:'society',
         color:'#E6A900'
     },

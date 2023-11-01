@@ -1,13 +1,15 @@
 
-export interface actionsType{
-    text:string,
-    color:string,
+export interface actionsType {
+    text: string,
+    color: string,
 }
 
-interface OmitCommentType{
+interface OmitCommentType {
     id: number
     created_at: string
 }
+
+export type typeCategory = '' |'all'|'technology' | 'science' | 'finance' | 'society' | 'entertainment' | 'health' | 'history' | 'news'
 
 export interface commentType extends OmitCommentType {
     category: string
@@ -19,7 +21,13 @@ export interface commentType extends OmitCommentType {
 }
 
 export interface factType {
-    category: string
-    source: string
-    text: string
+    category: typeCategory,
+    source: string,
+    text: string,
+}
+
+export interface notifyType {
+    text: string,
+    notify: boolean,
+    type: 'error' | 'sucess'
 }
